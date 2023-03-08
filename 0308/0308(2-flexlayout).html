@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+            background-color: cadetblue;
+            height : 100px;
+        }
+        section{
+            background-color: darkslateblue;
+            height : 300px;
+        }
+        aside{
+            background-color: gold;
+            height : 300px;
+        }
+        footer{
+            background-color: darkseagreen;
+            height : 100px;
+        }
+        .wrap{
+            display : flex;
+            flex-direction : column;
+            gap : 10px;
+            background : #eee;
+            justify-content : space-between;
+        }
+        .wrap2{
+            display : flex;
+            justify-content: space-between;
+            gap : 10px;
+        }
+        .wrap2 section{
+            flex-grow :1;
+        }
+        .wrap aside{
+            flex-basis:200px;
+        }
+    </style>
+</head>
+<body>
+    <div class = "wrap">
+        <header>header</header>
+        <div class = "wrap2">
+            <section>section</section>
+            <aside>aside</aside>
+        </div>
+        <footer>footer</footer>
+    </div>
+</body>
+</html>

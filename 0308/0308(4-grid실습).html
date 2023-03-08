@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습해보기</title>
+    <style>
+        .wrap{
+            display : grid;
+            grid-template-rows : 2fr 1fr 2fr;
+            grid-template-columns : 2fr 1fr 2fr;
+            grid-template-areas : 
+            "a a b"
+            "c d b"
+            "e f f";
+            gap : 10px;
+            width : 500px;
+            height : 500px;
+        }
+        .a{
+            background-color: skyblue;
+            grid-area : a;
+        }
+        .b{
+            background-color: yellow;
+            grid-area : b;
+        }
+        .c{
+            background-color: blueviolet;
+            grid-area : c;
+        }
+        .d{
+            background-color: salmon;
+            grid-area : d;
+        }
+        .e{
+            background-color: pink;
+            grid-area : e;
+        }
+        .f{
+            background-color: green;
+            grid-area : f;
+        }
+    </style>
+</head>
+<body>
+    <div class = "wrap">
+        <div class = "a">a</div>
+        <div class = "b">b</div>
+        <div class = "c">c</div>
+        <div class = "d">d</div>
+        <div class = "e">e</div>
+        <div class = "f">f</div>
+    </div>
+</body>
+</html>
