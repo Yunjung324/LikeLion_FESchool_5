@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --max-width : 1000px;
+            --plane-padding : 30px;
+        }
+        html{
+            font-size : 10px;
+        }
+        body{
+            font-size : clamp(10px, 2.5vw, 32px);
+        }
+        .wrap{
+            background-color: aquamarine;
+            height : 100px;
+            width : var(--max-width);
+            margin : auto;
+            max-width : calc(100% - var(--plane-padding)*2)
+        }
+
+        .float {
+            overflow: hidden;
+        }
+        .float li {
+            background: gold;
+            float: left;
+            width : calc((100%-(24px*3))/4);
+
+        }
+        .float li:not(:first-child){
+            margin-left : 24px;
+        }
+        .flex{
+            display : flex;
+            gap : 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        contents
+    </div>
+    <ul class="float">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    </div>
+    <ul class="float">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+</body>
+
+</html>

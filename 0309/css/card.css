@@ -1,0 +1,93 @@
+body{
+    background : rosybrown;
+}
+/*GRID 내가 짠 코드*/
+/* .total{
+    display : grid;
+    grid : auto-flow / 1fr 1fr 1fr 1fr;
+    gap : 15px;
+}  */
+/*GRID 여기까지*/
+
+/*GRID 강사님 코드*/
+/* .total{
+    display : grid;
+    grid-template-columns : repeat(auto-fill, minmax(288px, 1fr));
+    gap : 32px 24px;
+    width : min(1224px, calc(100%-60px));
+    margin : auto;
+} */
+/*Grid 강사님 코드 여기까지*/
+
+/*FLEX 내가 짠 코드*/
+/* .total{
+    display : flex;
+    flex-direction : row;
+    flex-wrap : wrap;
+    gap : 32px 24px;
+} */
+/*Flex 내가 짠 코드 여기까지*/
+
+/*FLEX 강사님이 짠 코드*/
+/* .total{
+    display : flex;
+    flex-wrap : wrap;
+    width : min(1224px, 100% -60px);
+    margin : auto;
+    gap : 32px 24px;
+}
+.total article{
+    flex-basis : 288px;
+    flex-grow : 0;
+    flex-shrink : 0;
+    width : min(288px, 100%);
+}
+@media(min-width: 641px) and (max-width : 1024px){
+    .total article{
+        width : calc((100%-(24px * 2))/3);
+    }
+} */
+/*FLEX 강사님이 짠 코드 여기까지*/
+
+/*FLOAT 강사님이 짠 코드*/
+
+
+
+.card-item{
+    width : 288px;
+    background : #fff;
+    /* box-shadow : 2px 2px 8px rgba() */
+    border-radius : 8px;
+    overflow : hidden;   /*테두리 적용시키려면 이것도 써야함*/
+}
+.card-item img{
+    width : 100%;
+    object-fit: cover;
+    vertical-align: top;
+}
+.card-text{
+    padding: 24px 16px 16px;
+}
+.card-text .title{
+    font-size : 16px;
+    white-space: nowrap;
+    overflow : hidden;
+    text-overflow: ellipsis;
+}
+
+.card-text .title + p{
+    font-size : 12px;
+    color : #5a6a72;
+    overflow : hidden;
+    display : -webkit-box;
+    -webkit-box-orient : vertical;
+    -webkit-line-clamp : 2;
+    word-break : break-all;
+    margin : 12px 0 16px;
+    line-height : 20px;
+}
+
+.card-text .read{
+    color : black;
+    padding-left : 6px;
+}
