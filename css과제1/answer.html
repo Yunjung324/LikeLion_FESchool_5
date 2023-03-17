@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>과제 좋은 답변</title>
+    <style>
+        /*글씨로 생기는 마진값 없애주기*/
+        h1, p{
+            margin : initial;
+        }
+        /*이미지 공백 없애기 위한 코드*/
+        img{
+            vertical-align: top;
+        }
+        /*가운데 정렬만을 담당하고 있음(레이아웃만)*/
+        .wrapper {
+            /* box-shadow: inset 0 0 10px red; */
+            width: 300px;
+            height: auto;
+            margin: 100px auto;
+        }
+        body{
+            background-image : url(images/bg.png);
+            /* background-position: center;
+            background-size : cover;
+            background-attachment: fixed; */
+        }
+        /*component*/
+        .card-cover{
+            /* box-shadow: inset 0 0 10px blue; */
+            margin : 0 auto;
+            display : block;
+            /*이미지 흐릿해짐*/
+            /* width : 100% */
+        }
+        .card-contents{
+            /* box-shadow: inset 0 0 10px purple; */
+            border-radius : 0 0 30px 30px;
+            background-color : #93572e;
+            color : white;
+            background-image : url("images/green.png");
+            background-repeat : repeat-x;
+            padding : 64px 20px 40px 20px;
+            /*상 우 하 좌*/
+            border-bottom : 10px solid #4a260b;
+        }
+        .card-contents h1{
+            margin-bottom : 10px;
+        }
+        .card-contents p{
+            color : antiquewhite;
+            /*유지보수 위해서 문단 늘어났을때 간격 주는 코드*/
+            /* margin : 1.2em 0; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <section class = "card">
+            <img class = "card-cover" src="images/animal03.png">
+            <div class = "card-contents">
+                <h1>Fox</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum reprehenderit animi doloribus quibusdam aut cupiditate recusandae, esse ducimus, voluptate at odio qui corrupti explicabo fugit voluptatibus hic architecto iure labore?</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
