@@ -1,0 +1,13 @@
+.custom-select1{
+    width : 200px;
+    height : 40px;
+    border-radius : 10px;
+    border : 1px solid #c4c4c4;
+    padding : 0 14px;
+    appearance: none;
+    background : url(select.svg) no-repeat no-repeat calc(100%-15px) / 1em;
+}
+.custom-select1:focus{
+    outline : none;
+    border-color : #9b51e0;
+}
