@@ -1,0 +1,341 @@
+body {
+    background-color: #EAE8FE;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 방법1 높이값 임의로 주기 */
+/* .scroll-wrap {
+    min-height: 200%;
+} */
+
+/*스크롤바*/
+.count::-webkit-scrollbar {
+    width: 4px;
+    /* 스크롤바의 너비 */
+}
+
+.count::-webkit-scrollbar-thumb {
+    height: 79px;
+    /* 스크롤바의 길이 */
+    background: #fff;
+
+    border-radius: 50px;
+}
+
+.count::-webkit-scrollbar-track {
+    background: #eae8fe;
+    /*스크롤바 뒷 배경 색상*/
+}
+
+.show-count::-webkit-scrollbar {
+    width: 4px;
+
+    /* 방법2 배경처리 */
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.show-count::-webkit-scrollbar-thumb {
+    height: 79px;
+    background: #fff;
+
+    border-radius: 50px;
+}
+
+/* 방법2 주석처리 */
+/* .show-count::-webkit-scrollbar-track {
+    background: #eae8fe;
+} */
+
+/*layout*/
+.container {
+    display: grid;
+    grid-template-areas:
+        "first second";
+    width: 738px;
+    gap: 18px;
+    margin: auto;
+}
+
+.grid-first {
+    grid-area: first;
+    background-color: #fff;
+}
+
+.grid-second {
+    grid-area: second;
+    background-color: #EAE8FE;
+}
+
+@media (max-width : 1920px) {
+    .container {
+        grid-template-areas:
+            "first second";
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width : 747px) {
+    .container {
+        grid-template-areas:
+            "first"
+            "second";
+        gap: 0;
+        width: 1200px;
+        max-width: 50%;
+        min-width: 350px;
+    }
+
+    .grid-second {
+        background-color: #fff;
+    }
+}
+
+/*style*/
+.grid-first,
+.grid-second {
+    width: 360px;
+    height: 545px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.logo {
+    width: 368px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 67px;
+}
+
+/**/
+.coke,
+.price {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 24px;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.violet-back {
+    width: 94px;
+    height: 130px;
+    position: absolute;
+    background: url(img/품절.png) no-repeat center rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    margin-left: 110px;
+}
+
+.price {
+    padding-top: 0;
+}
+
+[class *="-cola"] {
+    width: 94px;
+    height: 130px;
+    border-radius: 10px;
+}
+
+.change {
+    width: 200px;
+    height: 33px;
+    background-color: #EAE8FE;
+    border-radius: 5px;
+}
+
+.payment {
+    width: 200px;
+    border: none;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 0;
+    font-size: 13px;
+    color: #BDBDBD;
+}
+
+.count {
+    width: 200px;
+    height: 106px;
+    background-color: #EAE8FE;
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+    /*스크롤 추가*/
+    overflow-y: scroll;
+}
+
+.change-btn,
+.payment-btn {
+    width: 94px;
+    height: 33px;
+    background-color: #fff;
+}
+
+.get-btn {
+    width: 94px;
+    height: 106px;
+    color: #fff;
+    background-color: #6327FE;
+}
+
+[class *="-cola"] {
+    font-size: 9px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+}
+
+[class *="-btn"] {
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border: none;
+    font-weight: 600;
+}
+
+.original-cola,
+.green-cola {
+    border: 3px solid #6327FE;
+}
+
+.cola-img {
+    margin-top: 7px;
+}
+
+.cola_btn,
+.cola-name {
+    margin: 3px;
+}
+
+[class *="_btn"] {
+    border-radius: 50px;
+    background-color: #6327FE;
+    color: #fff;
+    font-size: 12px;
+    width: 70px;
+    height: 22px;
+    border: none;
+}
+
+.change {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+}
+
+.span {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 3px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.grid-second-a {
+    width: 360px;
+    height: 50px;
+    background-color: #fff;
+    display: flex;
+}
+
+.grid-second-b {
+    width: 360px;
+    height: 470px;
+    margin-top: 25px;
+    background-color: #fff;
+}
+
+.cash {
+    width: 306px;
+    height: 32px;
+    background-color: #EAE8FE;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+}
+
+.getcola {
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 23px;
+}
+
+.show-count {
+    width: 306px;
+    height: 364px;
+    background-color: #EAE8FE;
+    margin: auto;
+    border-radius: 7px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+    overflow-y: scroll;
+}
+
+.total-price {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 30px;
+}
+
+footer {
+    font-size: 12px;
+    font-weight: 500;
+    padding-top: 6px;
+}
+
+.countcola1,
+.countcola2,
+.countcola3 {
+    width: 170px;
+    height: 46px;
+    background-color: white;
+    margin: auto;
+    margin-top: 7px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.box1,
+.box2,
+.box3,
+.box4 {
+    width: 276px;
+    ;
+    height: 46px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+}
+
+.box1 {
+    margin-top: 12px;
+}
+
+.ccimg {
+    width: 20px;
+    margin-left: 10px;
+}
+
+.ccspan {
+    font-weight: 500;
+    font-size: 9px;
+    margin-left: 10px;
+}
+
+.ccnum {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #BDBDBD;
+    border-radius: 5px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: 8px;
+}
