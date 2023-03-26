@@ -1,0 +1,64 @@
+/*reset*/
+body, h1, h2, h3, p, ul, li, button{
+    padding : 0;
+    margin : 0;
+}
+button{
+    border : 0;
+    background: none;
+    font : inherit;
+}
+button:not(:disabled){
+    cursor : pointer;
+}
+ul,
+li{
+    list-style : none;
+}
+
+/*header*/
+h1{
+    font-size : 24px;
+    text-align: center;
+    width : 650px;
+    border-bottom : 2px solid #bdbdbd;
+    padding-bottom : 37px;
+    margin : auto;
+    /* padding : 0 0 37px 0; */
+}
+.cinema-nav ul{
+    display : flex;
+    gap : 20px;
+    justify-content: center;
+    margin-top : 18px;
+}
+.cinema-nav button{
+    padding : 10px 20px;
+    color : #828282;
+}
+.movie-article{
+    width : 220px;
+    height : 441px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    margin-top : 26px;
+}
+.poster{
+    margin-top: 19px;
+}
+h3{
+    font-size : 16px;
+    margin-top : 11px;
+}
+.article-ul{
+    color : #000;
+    font-weight : 400;
+    font-size : 13px;
+    margin-top : 12px;
+    display : flex;
+    flex-direction: column;
+    flex-wrap : wrap;
+}
+.article-span{
+    color : #bdbdbd;
+}
