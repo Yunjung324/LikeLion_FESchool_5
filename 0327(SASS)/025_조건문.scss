@@ -1,0 +1,75 @@
+@mixin button($color) {
+    @if $color ==black {
+        font-size: 32px;
+        background-color: white;
+    }
+
+    @else if $color ==white {
+        font-size: 24px;
+        background-color: black;
+    }
+
+    @else if $color ==green {
+        font-size: 24px;
+        background-color: black;
+    }
+
+    @else {
+        font-size: 16px;
+        background-color: blue;
+    }
+}
+
+// 1. if 단독
+// 2. if / else
+// 3. if / elif / else
+// 4. if / elif / elif .... / else
+
+.btn {
+    @include button(black); // 파선아실
+}
+$media-width-lg: 1000px;
+$media-width-md: 800px;
+$media-width-sm: 500px;
+
+$media-font-lg: 16px;
+$media-font-md: 14px;
+$media-font-sm: 12px;
+
+@mixin responsive($size) {
+    background-color: green;
+    width: 200px;
+    height: 200px;
+    font-size: $media-font-lg;
+    @if $size == lg {
+        @media screen and (max-width: $media-width-lg) {
+            width: 100px;
+            height: 100px;
+            font-size: $media-font-md;
+            @content;      
+        }
+    }
+    @else if $size == md {
+        @media screen and (max-width: $media-width-md) {
+            width: 100px;
+            height: 100px;
+            font-size: $media-font-md;
+            @content;      
+        }
+    }
+    @else if $size == sm {
+        @media screen and (max-width: $media-width-sm) {
+            width: 100px;
+            height: 100px;
+            font-size: $media-font-sm;       
+            @content;      
+        }
+    }
+    
+}
+
+.main {
+    @include responsive(lg){
+        color: red;
+    }
+}

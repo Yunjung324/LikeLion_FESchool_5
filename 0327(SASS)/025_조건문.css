@@ -1,0 +1,19 @@
+.btn {
+  font-size: 32px;
+  background-color: white;
+}
+
+.main {
+  background-color: green;
+  width: 200px;
+  height: 200px;
+  font-size: 16px;
+}
+@media screen and (max-width: 1000px) {
+  .main {
+    width: 100px;
+    height: 100px;
+    font-size: 14px;
+    color: red;
+  }
+}/*# sourceMappingURL=025_조건문.css.map */

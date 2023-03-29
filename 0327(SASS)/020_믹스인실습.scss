@@ -1,0 +1,22 @@
+@mixin box($value){
+    display: flex;
+    justify-content: $value;
+    align-items: $value;
+}
+@mixin item($value2){
+    width : 100px*($value2);
+    height : 100px*($value2);
+    border-radius: 10%*($value2);
+}
+.card{
+    @include box(center);
+}
+.card-item{
+    @include item(1);
+}
+.product{
+    @include box(right);
+}
+.product-item{
+    @include item(2);
+}
